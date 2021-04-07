@@ -1,0 +1,56 @@
+.home {
+    .left-menu {
+        width: 180px;
+        height: 100%;
+        position: fixed;
+        .ant-menu {
+            height: 100%;
+        }
+    }
+
+    .content {
+        margin-left: 180px;
+        transition: all .3s;
+
+        &.fold-content {
+            margin-left: 80px;
+        }
+
+        .header-nav {
+            position: relative;
+            height: 50px;
+            line-height: 50px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-bottom: 1px solid #eee;
+            .ant-breadcrumb {
+                display: inline-block;
+                margin-left: 17px;
+            }
+
+            .user {
+                position: absolute;
+                right: 10px;
+                top: 0px;
+                z-index: 9;
+                cursor: pointer;
+                text-align: center;
+                li{
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+                li:nth-of-type(2) {
+                    display: none;
+                    &:hover{
+                        background-color: #eee;
+                    }
+                }
+                &:hover {
+                    li {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
